@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    overflow-x: hidden;
+  }
+
+  * {
+    @apply border-[#eeeaf7];
+    box-sizing: border-box;
+  }
+
+  body {
+    @apply bg-white text-[#2f2f36] antialiased;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow-x: hidden;
+  }
+
+  a {
+    @apply no-underline;
+  }
+}
