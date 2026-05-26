@@ -10,7 +10,13 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import type { Author } from "@/types";
 
-export function EditProfileModal({ author }: { author: Author }) {
+export function EditProfileModal({
+  author,
+  triggerLabel = "Update"
+}: {
+  author: Author;
+  triggerLabel?: string;
+}) {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
@@ -25,7 +31,7 @@ export function EditProfileModal({ author }: { author: Author }) {
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
         <Button size="sm" type="button">
-          Update
+          {triggerLabel}
         </Button>
       </Dialog.Trigger>
       <AnimatePresence>
